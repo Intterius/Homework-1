@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/2cca30e068.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10" defer></script>
+
+    <script type="module" src="main.js" defer></script>
+    <title>Article Manager</title>
+  </head>
+  <body>
+    <h1 id="manager-title">Article Manager</h1>
+    <hr />
+    <br />
+    <form id="form-section">
+      <input
+        type="text"
+        id="form-title"
+        name="title"
+        placeholder="Title"
+        minlength="20"
+        maxlength="180"
+        autofocus
+        required
+      />
+      <br />
+      <textarea
+        type="text"
+        id="form-content"
+        name="content"
+        placeholder="Content..."
+        cols="100"
+        rows="9"
+        minlength="360"
+        maxlength="1080"
+        required
+      ></textarea>
+      <br />
+      <div id="checkbox-area">
+        <input type="checkbox" name="visible" id="visible" />
+        <label for="visible"><b>Visible</b></label>
+      </div>
+      <br />
+      <input type="submit" id="submit-btn" value="Submit" />
+      <br />
+    </form>
+    <hr />
+    <h2 id="list-title">List of Visible Articles</h2>
+    <div id="filter-articles">
+      <button id="visible-articles"><h4>Visible Articles</h4></button>
+      <button id="hidden-articles"><h4>Hidden Articles</h4></button>
+    </div>
+    <ul id="articles-list"></ul>
+  </body>
+</html>
